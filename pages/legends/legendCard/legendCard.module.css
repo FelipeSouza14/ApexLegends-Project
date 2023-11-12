@@ -1,0 +1,34 @@
+@import url(https://db.onlinewebfonts.com/c/61778cbc3c5430c994d624866708eb2d?family=Duke+Fill);
+
+.cardsContainer {
+    display: flex;
+    flex-wrap: wrap;
+    /* align-items: center; */
+    justify-content: center;
+}
+
+.cardsContainer figure {
+    display: flex;
+    flex-direction: column;
+    gap: 14px;
+    align-items: center;
+    justify-content: center;
+}
+
+.figureContainer {
+    margin: 0;
+}
+
+.figureContainer figcaption {
+    font-family: "Duke Fill";
+    font-size: 32px;
+}
+
+.figureContainer:hover {
+    transform: scale(1.1);
+}
+
+.linkLegendData {
+    text-decoration: none;
+    color: #000;
+}
