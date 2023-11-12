@@ -16,7 +16,7 @@ export function CardLegend() {
                 </figure>
             </Link>
 
-            <Link href="/legends/legendData" className={styles.linkLegendData}>
+            <Link href="/legends/legendData/legendData" className={styles.linkLegendData}>
                 <figure className={styles.figureContainer}>
                     <img
                         src="/assets/lendas/ballistic-image.png"
@@ -27,7 +27,7 @@ export function CardLegend() {
                 </figure>
             </Link>
 
-            <Link href="/legends/legendData" className={styles.linkLegendData}>
+            <Link href="/legends/legendData/legendData" className={styles.linkLegendData}>
                 <figure className={styles.figureContainer}>
                     <img
                         src="/assets/lendas/bangalore-image.png"
@@ -38,7 +38,7 @@ export function CardLegend() {
                 </figure>
             </Link>
 
-            <Link href="/legends/legendData" className={styles.linkLegendData}>
+            <Link href="/legends/legendData/legendData" className={styles.linkLegendData}>
                 <figure className={styles.figureContainer}>
                     <img
                         src="/assets/lendas/fuse-image.png"
