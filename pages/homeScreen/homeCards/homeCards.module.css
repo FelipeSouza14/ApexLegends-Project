@@ -1,0 +1,22 @@
+.divCards{
+    max-width: 80%;
+    min-height: 100vh;
+    margin-left: 150px;
+    display: flex;
+    justify-content: center;
+    align-items: center;
+    gap: 250px;
+}
+
+.cardLendasImagem{
+    width: 200px;
+    height: 300px;
+}
+
+.cardsHomePage{
+    cursor: pointer;
+}
+
+.cardsHomePage:hover{
+    transform: scale(1.1);
+}

@@ -1,0 +1,7 @@
+.homePage{
+    background-image: url(/assets/bgs/bg-tela-inicial.png);
+    background-color: rgb(21, 21, 21);
+    background-size: cover;
+    background-repeat: no-repeat;
+    background-attachment: fixed;
+}

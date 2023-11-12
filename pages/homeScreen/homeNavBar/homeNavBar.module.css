@@ -1,0 +1,46 @@
+.navBar{
+    background-color: black;
+    opacity: 0.88;
+    height: 80px;
+    display: flex;
+    justify-content: space-between;
+    align-items: center;
+}
+
+.logoImagem{
+    width: 120px;
+    height: 70px;
+    margin-left: 30px;
+}
+
+.buttonLogin{
+    background-color: transparent;
+    padding: 5px;
+    padding-right: 15px;
+    cursor: pointer;
+    font-size: 30px;
+    font-family: "Duke Fill";
+    color: white;
+    border: 0;
+}
+
+.buttonSignin{
+    background-color: transparent;
+    margin-right: 30px;
+    padding: 5px;
+    cursor: pointer;
+    font-size: 30px;
+    font-family: "Duke Fill";
+    color: red;
+    border: 0;
+}
+
+.buttonLogin:hover{
+    opacity: 0.5;
+    transform: scale(1.2);
+}
+
+.buttonSignin:hover{
+    opacity: 0.5;
+    transform: scale(1.2);
+}

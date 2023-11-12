@@ -11,7 +11,7 @@
   "author": "",
   "license": "ISC",
   "dependencies": {
-    "next": "^14.0.1",
+    "next": "^14.0.2",
     "react-icons": "^4.11.0"
   }
 }
