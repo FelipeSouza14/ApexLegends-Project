@@ -1,0 +1,9 @@
+.container {
+    background: url(/assets/bgs/bg-tela-lendas.png);
+    background-size: cover;
+    background-repeat: no-repeat;
+    background-attachment: fixed;
+    text-align: center;
+    padding: 15px;
+}
+
