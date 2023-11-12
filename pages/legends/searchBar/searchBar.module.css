@@ -1,0 +1,28 @@
+@import url(https://db.onlinewebfonts.com/c/61778cbc3c5430c994d624866708eb2d?family=Duke+Fill);
+
+.searchBar {
+    background-color: #FFF;
+    width: 550px;
+    text-align: center;
+    border-radius: 10px;
+    border: 2px solid #000;
+    padding: 6px;
+    font-family: "Duke Fill";
+    font-size: 30px;
+    font-weight: 400;
+    max-width: 100%;
+}
+
+.containerSearchBar {
+    display: flex;
+    justify-content: center;
+    align-items: center;
+}
+
+.searchButton {
+    margin-left: 12px;
+    padding: 0;
+    cursor: pointer;
+    border: none;
+    background-color: #FFF;
+}
