@@ -1,0 +1,43 @@
+.mapsPage{
+    background-image: url(/assets/bgs/bg-tela-mapas.png);
+    background-size: cover;
+    background-repeat: no-repeat;
+    background-attachment: fixed;
+}
+
+.mapsImage{
+    width: 1000px;
+    height: 300px;
+    border-radius: 5px;
+    z-index: 1;
+}
+
+.divMaps{
+    background: rgba(0, 0, 0, 0.8);
+    min-height: 100vh;
+    max-width: 80%;
+    margin-left: 150px;
+    display: flex;
+    justify-content: center;
+    align-items: center;
+    flex-direction: column;
+}
+
+.mapsName{
+    color: white;
+    font-family: "Duke Fill";
+}
+
+.favoriteIcon{
+    font-size: large;
+    color: white;
+}
+
+.headDiv{
+    display: flex;
+    justify-content: space-between;
+}
+
+.mapsData{
+    padding: 5%;
+}
