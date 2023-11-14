@@ -22,6 +22,7 @@
 .figureContainer figcaption {
     font-family: "Duke Fill";
     font-size: 32px;
+    color: white;
 }
 
 .figureContainer:hover {

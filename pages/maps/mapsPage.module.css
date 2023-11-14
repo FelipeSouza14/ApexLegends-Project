@@ -1,0 +1,6 @@
+.mapsPage{
+    background-image: url(/assets/bgs/bg-tela-mapas.png);
+    background-size: cover;
+    background-repeat: no-repeat;
+    background-attachment: fixed;
+}
