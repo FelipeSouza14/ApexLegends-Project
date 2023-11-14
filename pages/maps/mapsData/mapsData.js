@@ -1,6 +1,6 @@
 import styles from "./mapsData.module.css";
 
-export function mapsData (){
+export function MapsData (){
     return (
         <div className={styles.divMaps}>
             <div className={styles.mapsData}>
