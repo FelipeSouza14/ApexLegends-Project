@@ -13,7 +13,7 @@ export function HomeCards (){
             <div className={styles.cardsHomePage}>
                 <img className={styles.cardLendasImagem} src={"/assets/cards/card-armas.png"} />
             </div>
-            <Link href="/mapsPage" className={styles.linkCardMaps}>
+            <Link href="../maps/mapsPage" className={styles.linkCardMaps}>
                 <div className={styles.cardsHomePage}>
                     <img className={styles.cardLendasImagem} src={"/assets/cards/card-mapas.png"} />
                 </div>
