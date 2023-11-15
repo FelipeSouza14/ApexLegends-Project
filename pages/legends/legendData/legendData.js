@@ -1,4 +1,4 @@
-import { MdFavoriteBorder } from "react-icons/md";
+import { FavoriteButton } from "../../components/favoriteButton/favoriteButton";
 
 import styles from "./legendData.module.css";
 
@@ -13,7 +13,7 @@ export default function LegendData() {
                         <p className={styles.name}>Ash</p>
                         <p className={styles.title}>Instigadora Incisiva</p>
                     </div>
-                    <MdFavoriteBorder size={35} />
+                    <FavoriteButton size={35}/>
                 </div>
 
                 <div className={styles.legendInfo}>
