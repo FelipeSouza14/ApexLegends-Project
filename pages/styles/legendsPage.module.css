@@ -3,7 +3,8 @@
     background-size: cover;
     background-repeat: no-repeat;
     background-attachment: fixed;
+    background-color: rgb(35, 35, 35);
     text-align: center;
     padding: 15px;
-    background-color: rgb(35, 35, 35);
+    min-height: 100vh;
 }

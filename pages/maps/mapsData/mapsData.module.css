@@ -19,6 +19,7 @@
 .mapsName{
     color: white;
     font-family: "Duke Fill";
+    font-size: 32px;
 }
 
 .favoriteIcon{
@@ -29,8 +30,9 @@
 .headDiv{
     display: flex;
     justify-content: space-between;
+    align-items: center;
 }
 
 .mapsData{
-    padding: 5%;
+    padding: 4%;
 }
