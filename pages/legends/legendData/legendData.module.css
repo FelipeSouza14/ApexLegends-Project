@@ -1,0 +1,80 @@
+@import url('https://fonts.cdnfonts.com/css/tt-lakes-neue-trial');
+
+.containerPage {
+    display: flex;
+    align-items: center;
+    justify-content: center;
+    color: #FFF;
+    min-height: 100vh;
+    background: url(/assets/bgs/bg-tela-lendas.png);
+    background-size: cover;
+    background-repeat: no-repeat;
+    background-attachment: fixed;
+    background-color: rgb(35, 35, 35);
+}
+
+.containerPage img {
+    max-width: 100%;
+}
+
+.containerData {
+    display: grid;
+    grid-template-columns: 1fr; /* Uma única coluna */
+    grid-row-gap: 10px; /* Espaçamento vertical entre os itens */
+    background: rgba(174, 55, 56, 0.70);
+    width: 35%;
+    padding: 20px 0;
+}
+
+.containerTitles {
+    display: flex;
+    justify-content: space-around;
+    align-items: center;
+    /* font-size: 25px; */
+}
+
+.name {
+    margin: 0;
+    font-family: 'Duke Fill';
+    font-size: 45px;
+}
+
+.title {
+    margin: 0;
+    font-family: 'TT Lakes Neue Trl Cmd';
+    font-size: 32px;
+}
+
+.legendInfo {
+    display: flex;
+    justify-content: space-around;
+    font-size: 22px;
+    font-family: 'TT Lakes Neue Trl Cmd';
+    font-weight: bold;
+}
+
+.legendInfoData {
+    font-weight: 400;
+}
+
+.containerAbilities {
+    text-align: center;
+    display: flex;
+    flex-wrap: wrap;
+    align-items: center;
+    justify-content: center;
+}
+
+.containerAbilities img {
+    width: 180px;
+}
+
+.containerAbilities figcaption {
+    font-size: 21px;
+    font-family: 'TT Lakes Neue Trl Cmd';
+}
+
+.containerAbilities .abilityType {
+    font-family: 'Duke Fill';
+    color: #F00;
+}
