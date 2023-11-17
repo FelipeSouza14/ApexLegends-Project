@@ -10,9 +10,11 @@ export function HomeCards (){
                     <img className={styles.cardLendasImagem} src={"/assets/cards/card-lendas.png"} />
                 </div>
             </Link>
-            <div className={styles.cardsHomePage}>
-                <img className={styles.cardLendasImagem} src={"/assets/cards/card-armas.png"} />
-            </div>
+            <Link href="../weapons/weaponsPage" className={styles.linkCardWeapons}>
+                <div className={styles.cardsHomePage}>
+                    <img className={styles.cardLendasImagem} src={"/assets/cards/card-armas.png"} />
+                </div>
+            </Link>
             <Link href="../maps/mapsPage" className={styles.linkCardMaps}>
                 <div className={styles.cardsHomePage}>
                     <img className={styles.cardLendasImagem} src={"/assets/cards/card-mapas.png"} />
