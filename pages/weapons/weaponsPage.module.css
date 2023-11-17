@@ -23,6 +23,13 @@
     pointer-events: none; 
 }
 
+.nomes {
+    font-family: 'Duke Fill';
+    font-size: 35px;
+    margin: 0;
+    margin-top: 2%;
+}
+
 .backDiv{
     display: flex;
     width: 304px;
@@ -109,17 +116,21 @@
 .weaponsClassImage{
     width: 190px;
     height: 80px;
-    margin-top: 10%;
+    margin-top: 6%;
 }
 
 .weaponsClassImageTwo{
     width: 250px;
     height: 80px;
-    margin-top: 10%;
+    margin-top: 6%;
 }
 
 .weaponsClassImageThree{
     width: 170px;
     height: 80px;
-    margin-top: 10%;
+    margin-top: 6%;
+}
+
+.linkWeaponsCategory {
+    text-decoration: none;
 }
