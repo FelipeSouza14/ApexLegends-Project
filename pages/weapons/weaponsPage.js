@@ -5,43 +5,43 @@ export default function WeaponsPage (){
         <div className={styles.containerWeapons}>
             <div className={styles.backDiv}>
                 <div className={styles.frontDiv}>
-                    <img src={"/assets/armas/icone-armas/assalto-imagem.png"} className={styles.weaponsClassImage}/>
+                    <img src={"/assets/armas/WEAPONS-ICONS/assalto-imagem.png"} className={styles.weaponsClassImage}/>
                     <p className={styles.nomes}>Nome</p>
                 </div>
             </div>
             <div className={styles.backDiv}>
                 <div className={styles.frontDiv}>
-                    <img src={"/assets/armas/icone-armas/smg-imagem.png"} className={styles.weaponsClassImage}/>
+                    <img src={"/assets/armas/WEAPONS-ICONS/smg-imagem.png"} className={styles.weaponsClassImage}/>
                     <p className={styles.nomes}>Nome</p>
                 </div>
             </div>
             <div className={styles.backDiv}>
                 <div className={styles.frontDiv}>
-                    <img src={"/assets/armas/icone-armas/lmg-imagem.png"} className={styles.weaponsClassImageTwo}/>
+                    <img src={"/assets/armas/WEAPONS-ICONS/lmg-imagem.png"} className={styles.weaponsClassImageTwo}/>
                     <p className={styles.nomes}>Nome</p>
                 </div>
             </div>
             <div className={styles.backDiv}>
                 <div className={styles.frontDiv}>
-                    <img src={"/assets/armas/icone-armas/atirador-imagem.png"} className={styles.weaponsClassImageTwo}/>
+                    <img src={"/assets/armas/WEAPONS-ICONS/atirador-imagem.png"} className={styles.weaponsClassImageTwo}/>
                     <p className={styles.nomes}>Nome</p>
                 </div>
             </div>
             <div className={styles.backDiv}>
                 <div className={styles.frontDiv}>
-                    <img src={"/assets/armas/icone-armas/snipers-imagem.png"} className={styles.weaponsClassImageTwo}/>
+                    <img src={"/assets/armas/WEAPONS-ICONS/snipers-imagem.png"} className={styles.weaponsClassImageTwo}/>
                     <p className={styles.nomes}>Nome</p>
                 </div>
             </div>
             <div className={styles.backDiv}>
                 <div className={styles.frontDiv}>
-                    <img src={"/assets/armas/icone-armas/escopetas-imagem.png"} className={styles.weaponsClassImageTwo}/>
+                    <img src={"/assets/armas/WEAPONS-ICONS/escopetas-imagem.png"} className={styles.weaponsClassImageTwo}/>
                     <p className={styles.nomes}>Nome</p>
                 </div>
             </div>
             <div className={styles.backDiv}>
                 <div className={styles.frontDiv}>
-                    <img src={"/assets/armas/icone-armas/pistolas-imagem.png"} className={styles.weaponsClassImageThree}/>
+                    <img src={"/assets/armas/WEAPONS-ICONS/pistolas-imagem.png"} className={styles.weaponsClassImageThree}/>
                     <p className={styles.nomes}>Nome</p>
                 </div>
             </div>
