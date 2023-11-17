@@ -1,25 +1,33 @@
 import Link from "next/link";
 import styles from "./homeCards.module.css";
 
-
-export function HomeCards (){
+export function HomeCards() {
     return (
         <div className={styles.divCards}>
-            <Link href="/legendsPage" className={styles.linkCardLegends}>
+            <Link href="/legendsPage">
                 <div className={styles.cardsHomePage}>
-                    <img className={styles.cardLendasImagem} src={"/assets/cards/card-lendas.png"} />
+                    <img
+                        className={styles.cardLendasImagem}
+                        src={"/assets/cards/card-lendas.png"}
+                    />
                 </div>
             </Link>
-            <Link href="../weapons/weaponsPage" className={styles.linkCardWeapons}>
+            <Link href="../weapons/weaponsPage">
                 <div className={styles.cardsHomePage}>
-                    <img className={styles.cardLendasImagem} src={"/assets/cards/card-armas.png"} />
+                    <img
+                        className={styles.cardLendasImagem}
+                        src={"/assets/cards/card-armas.png"}
+                    />
                 </div>
             </Link>
-            <Link href="../maps/mapsPage" className={styles.linkCardMaps}>
+            <Link href="../maps/mapsPage">
                 <div className={styles.cardsHomePage}>
-                    <img className={styles.cardLendasImagem} src={"/assets/cards/card-mapas.png"} />
+                    <img
+                        className={styles.cardLendasImagem}
+                        src={"/assets/cards/card-mapas.png"}
+                    />
                 </div>
             </Link>
         </div>
-    )
+    );
 }
