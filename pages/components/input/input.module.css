@@ -1,0 +1,16 @@
+.input{
+    padding: 15px 15px;
+    width: 450px; /* ou qualquer percentual desejado */
+    height: 50PX; /* ou qualquer altura desejada */
+    border: 0;
+    background-color: rgb(31, 30, 30);
+    color: #fff;
+    border-radius: 10px;
+    font-size: 22px;
+    font-family: "Duke Fill";
+    font-weight: bold;
+    align-items: center;
+    border: 1px solid #838080; /* Cor branca (#ffffff) e largura de 1 pixel */
+    
+    
+    }
