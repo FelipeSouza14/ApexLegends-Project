@@ -1,0 +1,15 @@
+.button{
+padding: 15px 15px;
+width: 480px; /* ou qualquer percentual desejado */
+height: 80PX; /* ou qualquer altura desejada */
+border: 0;
+background-color: rgb(160, 37, 37);
+color: white;
+font-size: 25PX;
+font-weight: 10px;
+border-radius: 10px;
+cursor: pointer;
+font-family: "Duke Fill";
+font-weight: bold;
+align-items: center;
+}
