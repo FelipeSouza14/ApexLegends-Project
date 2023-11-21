@@ -1,0 +1,30 @@
+.card{
+    background-color: black;
+    color: aliceblue;
+    width: 170px;
+    padding: 200px;
+    border-radius: 10px;
+    max-width: 50%;
+    min-height: 50vh;
+    margin-right: 60%;
+    justify-content: center;
+    align-items: center;
+    display: flex;
+
+}
+
+
+.title{
+    text-align: center;
+    color: aliceblue;
+}
+
+
+.logoImagem{
+    width: 220px;
+    height: 100px;
+    margin-right: 10px;
+    position: absolute;
+    top: 130px;
+
+}
