@@ -1,7 +1,5 @@
 .background{
-    background-image: url(/assets/bgs/bg-tela-login-cadastro.png);
-    background-color: rgb(21, 21, 21);
-    background-size: cover;
+    background: linear-gradient(180deg, rgba(218, 41, 42, 0.69) 15.1%, rgba(0, 0, 0, 0.00) 100%);    background-size: cover;
     background-repeat: no-repeat;
     background-attachment: fixed;
     min-height: 100vh;
@@ -20,23 +18,31 @@
 }
 
 .logoImagem{
-    width: 220px;
+    width: 90px;
     height: 100px;
-    margin-right: 10px;
+    margin-right: 90%;
     position: absolute;
-    top: 100px;
+    top: 0%;
 
 }
 
-.buttonRegister{
-    background-color: transparent;
-    padding: 5px;
-    padding-left: 180px;
-    cursor: pointer;
-    font-size: 20px;
-    font-family: "Duke Fill";
-    color: white;
+
+.container {
+    display: flex;
+    justify-content: space-between; /* ou qualquer outra propriedade de justificação desejada */
+    gap: 13px;
+  }
+  .input{
+    padding: 15px 15px;
+    width: 200px; /* ou qualquer percentual desejado */
+    height: 50PX; /* ou qualquer altura desejada */
     border: 0;
-  
-}
-
+    background-color: rgb(31, 30, 30);
+    color: #fff;
+    border-radius: 10px;
+    font-size: 22px;
+    font-family: "Duke Fill";
+    font-weight: bold;
+    align-items: center;
+    border: 1px solid #838080; /* Cor branca (#ffffff) e largura de 1 pixel */
+    }
