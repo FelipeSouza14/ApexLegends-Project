@@ -1,7 +1,7 @@
 import Link from "next/link";
 
 import styles from "./styles/register.module.css";
-import LoginCard from "./components/loginCard/loginCard";
+import LoginCard from "./components/loginCard/registerCard";
 import Input from "./components/input/input";
 import Button from "./components/button/button";
 
@@ -10,15 +10,18 @@ export default function RegisterPage(){
    return (
 
    <div className={styles.background}>   
- 
-         <LoginCard>
+         <img className={styles.logoImagem} src={"/assets/logos/logo-vermelho.png"} />
+
+         <LoginCard title="CRIE SUA CONTA">
 
          <form className={styles.form}>
-         <Input type="nome" placeholder="NOME"/>
+        <div className={styles.container}> 
+         <Input className={styles.input} type="nome" placeholder="NOME"/>
+         <Input className={styles.input} type="nome" placeholder="SOBRENOME"/>
+         </div>
          <Input type="email" placeholder="EMAIL"/>
          <Input type="password" placeholder="SENHA"/>
-         <Button>Registrar</Button>
-         <Link href="/login"><button className={styles.buttonRegister}>Já tem uma conta? clique aqui</button></Link>  
+         <Button>ENVIAR</Button>
 
          </form>
          </LoginCard>
