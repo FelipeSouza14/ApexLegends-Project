@@ -1,34 +1,43 @@
 import Link from "next/link";
-
-import styles from "./styles/register.module.css";
-import LoginCard from "./components/loginCard/registerCard";
+import RegisterCard from "./components/loginCard/registerCard";
 import Input from "./components/input/input";
 import Button from "./components/button/button";
 
-export default function RegisterPage(){
+import styles from "./styles/register.module.css";
 
-   return (
+export default function RegisterPage() {
+    return (
+        <div className={styles.background}>
+            <img
+                className={styles.logoImage}
+                src={"/assets/logos/logo-branca.png"}
+            />
 
-   <div className={styles.background}>   
-         <img className={styles.logoImagem} src={"/assets/logos/logo-vermelho.png"} />
-
-         <LoginCard title="CRIE SUA CONTA">
-
-         <form className={styles.form}>
-        <div className={styles.container}> 
-         <Input className={styles.input} type="nome" placeholder="NOME"/>
-         <Input className={styles.input} type="nome" placeholder="SOBRENOME"/>
-         </div>
-         <Input type="email" placeholder="EMAIL"/>
-         <Input type="password" placeholder="SENHA"/>
-         <Button>ENVIAR</Button>
-
-         </form>
-         </LoginCard>
-</div>
-
-
-
-   )
-
-} 
+            <RegisterCard title="CRIE SUA CONTA">
+                <form className={styles.form}>
+                    <div className={styles.container}>
+                        <Input
+                            className={styles.input}
+                            type="nome"
+                            placeholder="NOME"
+                        />
+                        <Input
+                            className={styles.input}
+                            type="nome"
+                            placeholder="SOBRENOME"
+                        />
+                    </div>
+                    <Input type="email" placeholder="E-MAIL" />
+                    <Input type="password" placeholder="SENHA" />
+                    <Button>ENVIAR</Button>
+                </form>
+                <p className={styles.conectP}>
+                    Já tem uma conta?
+                    <Link href="/login" className={styles.linkLoginPage}>
+                        Conectar
+                    </Link>
+                </p>
+            </RegisterCard>
+        </div>
+    );
+}

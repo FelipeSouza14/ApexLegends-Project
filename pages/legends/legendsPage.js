@@ -1,7 +1,7 @@
-import { CardLegend } from "./legends/legendCard/legendCard";
-import { SearchBar } from "./legends/searchBar/searchBar";
+import { CardLegend } from "./legendCard/legendCard";
+import { SearchBar } from "./searchBar/searchBar";
 
-import styles from './styles/legendsPage.module.css';
+import styles from './legendsPage.module.css';
 
 export default function LegendsPage() {
     return (

@@ -1,12 +1,10 @@
-import styles from "./registerCard.module.css"
+import styles from "./registerCard.module.css";
 
-export default function LoginCard({ title, children }){
+export default function RegisterCard({ title, children }) {
     return (
         <div className={styles.card}>
-
-            <h4 className={styles.title}>{title}</h4>
-             {children}
+            <p className={styles.title}>{title}</p>
+            {children}
         </div>
-    
-    )
+    );
 }

@@ -4,7 +4,7 @@ import styles from "./homeCards.module.css";
 export function HomeCards() {
     return (
         <div className={styles.divCards}>
-            <Link href="/legendsPage">
+            <Link href="/legends/legendsPage">
                 <div className={styles.cardsHomePage}>
                     <img
                         className={styles.cardLendasImagem}
