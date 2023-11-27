@@ -1,29 +1,20 @@
 .card{
-    background-color: black;
+    background: rgba(31, 30, 30, 0.96);
     color: #FFF;
-    width: 170px;
+    width: 120px;
+    height: 220px;
     padding: 200px;
     border-radius: 10px;
-    max-width: 50%;
-    min-height: 50vh;
     margin-right: 60%;
     justify-content: center;
     align-items: center;
     display: flex;
+    flex-direction: column;
+    gap: 50px;
 }
 
 
-.title{
-    text-align: center;
-    color: aliceblue;
-}
-
-
-.logoImagem{
-    width: 220px;
-    height: 100px;
-    margin-right: 10px;
-    position: absolute;
-    top: 130px;
-
+.logoImage{
+    width: 200px;
+    height: 110px;
 }
