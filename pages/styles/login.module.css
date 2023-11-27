@@ -28,30 +28,35 @@
 
 .buttonRegister{
     background-color: transparent;
-    padding: 5px;
-    padding-left: 130px;
     cursor: pointer;
-    font-size: 20px;
+    font-size: 22px;
     font-family: "Duke Fill";
     color: white;
     border: 0;
-  
 }
+
 .buttonLembrar{
-    background-color: transparent;
     padding: 5px;
     padding-right: 40px;
-    cursor: pointer;
-    font-size: 20px;
+    font-size: 22px;
     font-family: "Duke Fill";
     color: white;
-    border: 0;
-  
 }
 
 .container {
     display: flex;
-    margin-right: 10px; /* Adicione margens conforme necessário para espaçamento entre os elementos */
+    margin-right: 10px; 
 
   }
-  
+
+.minhaCaixaDeSelecao{
+    width: 15px;
+    height: 15px;
+    cursor: pointer;
+}
+
+.subButtons{
+    display: flex;
+    gap: 170px;
+    margin-top: 5px;
+}
