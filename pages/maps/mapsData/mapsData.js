@@ -1,24 +1,40 @@
+import { useEffect, useState } from "react";
+import { getMapsData } from "../../../api/mapsApi";
 import { FavoriteButton } from "../../components/favoriteButton/favoriteButton";
 
 import styles from "./mapsData.module.css";
 
-export function MapsData (){
+export function MapsData() {
+    const [mapsData, setMapsData] = useState([]);
+
+    useEffect(() => {
+        async function fetchData() {
+            try {
+                const data = await getMapsData();
+                setMapsData(data);
+            } catch (error) {
+                console.error("Erro ao buscar dados de mapas", error);
+            }
+        }
+
+        fetchData();
+    }, []); // O segundo argumento [] garante que a função useEffect seja executada apenas uma vez na montagem
+
     return (
         <div className={styles.divMaps}>
-            <div className={styles.mapsData}>
-                <div className={styles.headDiv}>
-                    <p className={styles.mapsName}>CONFINS DO MUNDO</p>
-                    <FavoriteButton size={40}/>
+            {mapsData.map((map, index) => (
+                <div key={index} className={styles.mapsData}>
+                    <div className={styles.headDiv}>
+                        <p className={styles.mapsName}>{map.nome}</p>
+                        <FavoriteButton size={40} />
+                    </div>
+                    <img
+                        className={styles.mapsImage}
+                        src={map.imagem}
+                        alt={`Imagem de ${map.nome}`}
+                    />
                 </div>
-                <img className={styles.mapsImage} src={"/assets/mapas/WORLDS-EDGE/worlds-edge-official.jpg"} />
-            </div>
-            <div className={styles.mapsData}>
-                <div className={styles.headDiv}>
-                    <p className={styles.mapsName}>DESFILADEIRO DO REI</p>
-                    <FavoriteButton size={40}/>
-                </div>
-                <img className={styles.mapsImage} src={"/assets/mapas/KINGS-CANYON/kings-canyon-official.jpg"} />
-            </div>
+            ))}
         </div>
-    )
+    );
 }
