@@ -1,11 +1,13 @@
+import { useRouter } from "next/router";
 import { FavoriteButton } from "../../components/favoriteButton/favoriteButton";
-import { getLegendsData } from "../../../api/legendsApi";
 
 import styles from "./legendData.module.css";
 
 //Precisará receber um parâmetro para saber qual lenda foi clicada
-export default function LegendData({ legendsData }) {
-    console.log("legendsData recebido:", legendsData);
+export default function LegendData() {
+    const router = useRouter();
+    const { legendName } = router.query;
+
     return (
         <div className={styles.containerPage}>
             <div className={styles.divDataBackground}>
@@ -13,7 +15,7 @@ export default function LegendData({ legendsData }) {
                 <div className={styles.containerData}>
                     <div className={styles.containerTitles}>
                         <div>
-                            <p className={styles.name}>Ash</p>
+                            <p className={styles.name}>{legendName}</p>
                             <p className={styles.title}>Instigadora Incisiva</p>
                         </div>
                         <FavoriteButton size={35}/>
@@ -59,11 +61,11 @@ export default function LegendData({ legendsData }) {
     );
 }
 
-export async function getStaticProps() {
-    const legendsData = await getLegendsData();
-    return {
-        props: {
-            legendsData,
-        },
-    };
-}
+// export async function getStaticProps() {
+//     const legendsData = await getLegendsData();
+//     return {
+//         props: {
+//             legendsData,
+//         },
+//     };
+// }

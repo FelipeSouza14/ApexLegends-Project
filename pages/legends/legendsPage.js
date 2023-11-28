@@ -8,7 +8,6 @@ export default function LegendsPage() {
         <div className={styles.container}>
             <SearchBar/>            
             <CardLegend/>
-            <CardLegend/>
         </div>
     )
 }
