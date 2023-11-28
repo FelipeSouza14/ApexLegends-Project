@@ -1,9 +1,11 @@
 import { FavoriteButton } from "../../components/favoriteButton/favoriteButton";
+import { getLegendsData } from "../../../api/legendsApi";
 
 import styles from "./legendData.module.css";
 
 //Precisará receber um parâmetro para saber qual lenda foi clicada
-export default function LegendData() {
+export default function LegendData({ legendsData }) {
+    console.log("legendsData recebido:", legendsData);
     return (
         <div className={styles.containerPage}>
             <div className={styles.divDataBackground}>
@@ -55,4 +57,13 @@ export default function LegendData() {
             </div>
         </div>
     );
+}
+
+export async function getStaticProps() {
+    const legendsData = await getLegendsData();
+    return {
+        props: {
+            legendsData,
+        },
+    };
 }
