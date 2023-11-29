@@ -78,6 +78,9 @@
 .containerAbilities .abilityType {
     font-family: 'Duke Fill';
     color: #F00;
+    background-color: #FFF;
+    border-radius: 7px;
+    padding: 1px;
 }
 
 .divDataBackground{
