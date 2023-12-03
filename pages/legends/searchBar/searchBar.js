@@ -1,8 +1,21 @@
 import { BiSearch } from "react-icons/bi";
-
 import styles from "./searchBar.module.css";
+import { getLegendsData } from "../../../api/legendsApi";
+import { useState } from "react";
 
-export function SearchBar() {
+
+export async function SearchBar() {
+    const [search, setSearch] = useState("");
+
+    const data = await getLegendsData();
+    const searchLowerCase = search.toLocaleLowerCase();
+    const dataSearch = data.filter((p) => {
+        return (
+            p.nome.toLocaleLowerCase().includes(searchLowerCase) ||
+            p.classe.toLocaleLowerCase().includes(searchLowerCase)
+        )
+    });
+
     return (
         <div className={styles.containerSearchBar}>
             <input
