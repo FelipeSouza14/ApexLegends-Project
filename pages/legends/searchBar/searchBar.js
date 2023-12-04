@@ -10,9 +10,9 @@ export function SearchBar({ setSearch }) {
                 placeholder="pesquise sua lenda por nome ou classe"
                 onChange={(e) => setSearch(e.target.value)}
             />
-            <button type="submit" className={styles.searchButton}>
+            <div className={styles.searchButton}>
                 <BiSearch size={35} />
-            </button>
+            </div>
         </div>
     );
 }
