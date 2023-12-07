@@ -2,10 +2,60 @@ import Link from "next/link";
 import RegisterCard from "./components/loginCard/registerCard";
 import Input from "./components/input/input";
 import Button from "./components/button/button";
-
 import styles from "./styles/register.module.css";
+import { auth } from '../util/firebase';
+import { createUserWithEmailAndPassword } from "firebase/auth";
+import { useState } from 'react';
+import { useRouter } from 'next/router';
+import validator from "validator";
+
 
 export default function RegisterPage() {
+    const [email, setEmail] = useState('');
+    const [validEmail, setValidEmail] = useState(true);
+    const [password, setPassword] = useState('');
+    const router = useRouter();
+    const [errorMessage, setErrorMessage] = useState('');
+
+    const handleEmailChange = (e) => {
+        const inputEmail = e.target.value;
+        setEmail(inputEmail);
+
+        const isValid = validator.isEmail(inputEmail);
+        setValidEmail(isValid);
+    };
+
+    const handleSubmit = async (e) => {
+        e.preventDefault();
+        console.log('Email:', validEmail);
+
+        if (validEmail  && password.length >= 6) {
+            createUserWithEmailAndPassword(auth, email, password)
+            .then(() => {
+                setErrorMessage('');
+                console.log('Usuário criado com sucesso!');
+                router.push('/login'); 
+
+            })
+            .catch((error) => {
+                setErrorMessage('Email já está em uso');
+                
+            });
+        } 
+        else if (password.length < 6) {
+            setErrorMessage('Senha deve ter no mínimo 6 caracteres');
+        } 
+
+        else {
+            setErrorMessage('Email inválido');
+        }
+    };
+
+
+    const handlePasswordChange = (e) => {
+        setPassword(e.target.value);
+    };
+
     return (
         <div className={styles.background}>
             <img
@@ -14,7 +64,7 @@ export default function RegisterPage() {
             />
 
             <RegisterCard title="CRIE SUA CONTA">
-                <form className={styles.form}>
+                <form className={styles.form} onSubmit={handleSubmit}>
                     <div className={styles.container}>
                         <Input
                             className={styles.input}
@@ -27,8 +77,19 @@ export default function RegisterPage() {
                             placeholder="SOBRENOME"
                         />
                     </div>
-                    <Input type="email" placeholder="E-MAIL" />
-                    <Input type="password" placeholder="SENHA" />
+                    <Input type="email" 
+                    placeholder="E-MAIL"                             
+                    value={email}
+                    onChange={handleEmailChange}
+/>
+                    <Input type="password" 
+                    placeholder="SENHA" 
+                    value={password}
+                    onChange={handlePasswordChange}
+                    />
+                    {!validEmail && <p> Email inválido </p>}
+                    {errorMessage &&<p >{errorMessage}</p>}
+
                     <Button>ENVIAR</Button>
                 </form>
                 <p className={styles.conectP}>
