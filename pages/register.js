@@ -29,7 +29,7 @@ export default function RegisterPage() {
         e.preventDefault();
         console.log('Email:', validEmail);
 
-        if (validEmail  && password.length >= 6) {
+        if (validEmail  && password.length >= 8) {
             createUserWithEmailAndPassword(auth, email, password)
             .then(() => {
                 setErrorMessage('');
@@ -43,7 +43,7 @@ export default function RegisterPage() {
             });
         } 
         else if (password.length < 6) {
-            setErrorMessage('Senha deve ter no mínimo 6 caracteres');
+            setErrorMessage('Senha deve ter no mínimo 8 caracteres');
         } 
 
         else {
