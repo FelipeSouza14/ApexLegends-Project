@@ -24,6 +24,13 @@
     color: white;
 }
 
+.divProfile{
+    position: absolute;
+    width: 500px;
+    height: 500px;
+    background-color: aqua;
+}
+
 /* .buttonLogin{
     background-color: transparent;
     padding: 5px;
