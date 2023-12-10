@@ -1,7 +1,6 @@
 import Link from "next/link";
 import { useEffect, useState } from "react";
 import { getLegendsData } from "../../../api/legendsApi";
-
 import styles from "./legendCard.module.css";
 import { SearchBar } from "../searchBar/searchBar";
 
@@ -34,7 +33,7 @@ export function CardLegend() {
 
     return (
         <div>
-            <SearchBar setSearch={setSearch} />,
+            <SearchBar setSearch={setSearch} />
             <div className={styles.cardsContainer}>
                 {filteredLegends.map((legend, index) => (
                     <Link

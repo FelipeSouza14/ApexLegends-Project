@@ -29,7 +29,7 @@ export default function RegisterPage() {
         e.preventDefault();
         console.log('Email:', validEmail);
 
-        if (validEmail  && password.length >= 8) {
+        if (validEmail && password.length >= 8) {
             createUserWithEmailAndPassword(auth, email, password)
             .then(() => {
                 setErrorMessage('');
