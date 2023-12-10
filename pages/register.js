@@ -17,14 +17,18 @@ export default function RegisterPage() {
     const [password, setPassword] = useState("");
     const router = useRouter();
     const [errorMessage, setErrorMessage] = useState("");
-
-    const addData = async (auth, email, password) => {
+    const [name, setName] = useState("");
+    const [lastName, setLastName] = useState("");
+    
+    const addData = async (auth, email, password, name, lastName) => {
         try {
             const firestore = getFirestore(db);
             const docRef = await addDoc(collection(firestore, "usuarios"), {
                 id: auth.lastNotifiedUid,
                 email: email,
                 senha: password,
+                nome: name,
+                sobrenome: lastName
             });
         } catch (e) {
             console.error("Error adding document: ", e);
@@ -53,7 +57,7 @@ export default function RegisterPage() {
                 .catch((error) => {
                     setErrorMessage("Email já está em uso");
                 });
-            addData(auth, email, password);
+            addData(auth, email, password, name, lastName);
         } else if (password.length < 8) {
             setErrorMessage("Senha deve ter no mínimo 8 caracteres");
         } else {
@@ -63,6 +67,14 @@ export default function RegisterPage() {
 
     const handlePasswordChange = (e) => {
         setPassword(e.target.value);
+    };
+
+    const handleNameChange = (e) => {
+        setName(e.target.value);
+    };
+
+    const handleLastNameChange = (e) => {
+        setLastName(e.target.value);
     };
 
     return (
@@ -78,12 +90,16 @@ export default function RegisterPage() {
                         <Input
                             className={styles.input}
                             type="nome"
+                            value={name}
                             placeholder="NOME"
+                            onChange={handleNameChange}
                         />
                         <Input
                             className={styles.input}
                             type="nome"
+                            value={lastName}
                             placeholder="SOBRENOME"
+                            onChange={handleLastNameChange}
                         />
                     </div>
                     <Input
