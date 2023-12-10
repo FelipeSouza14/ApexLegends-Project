@@ -1,11 +1,11 @@
 .divCards{
-    max-width: 80%;
+    min-width: 80%;
     min-height: 100vh;
-    margin-left: 150px;
     display: flex;
+    flex-wrap: wrap;
     justify-content: center;
     align-items: center;
-    gap: 250px;
+    gap: 20%;
 }
 
 .cardLendasImagem{

@@ -1,6 +1,32 @@
 .profileDiv{
     position: absolute;
-    width: 300px;
+    width: 20%;
     min-height: 100vh;
-    background-color: aqua;
+    display: flex;
+    flex-direction: column;
+    justify-content: center;
+    align-items: center;
+    background-color: rgb(14, 14, 14);
+    color: white;
+    z-index: 1;
+    right: 0;
+    top: 0;
 }
+
+.profileIcon{
+    position: absolute;
+    width: 50%;
+    height: 50%;
+    bottom: 60%;
+}
+
+.closeButton{
+    position: absolute;
+    background: transparent;
+    color: white;
+    cursor: pointer;
+    border: 0;
+    top: 2%;
+    left: 2%;
+}
+

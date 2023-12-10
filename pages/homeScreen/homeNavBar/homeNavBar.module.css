@@ -1,7 +1,8 @@
 .navBar{
     background-color: black;
     opacity: 0.88;
-    height: 80px;
+    min-width: 100vw;
+    min-height: 30%;
     display: flex;
     justify-content: space-between;
     align-items: center;
@@ -9,8 +10,8 @@
 
 .logoImagem{
     width: 8%;
-    height: 80%;
     margin-left: 2%;
+    
 }
 
 .profileButton{
