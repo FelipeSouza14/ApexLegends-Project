@@ -5,10 +5,12 @@ import Input from "./components/input/input";
 import Button from "./components/button/button";
 import validator from 'validator';
 import { useState } from 'react';
-import { signInWithEmailAndPassword} from "firebase/auth";
+import { signInWithEmailAndPassword } from "firebase/auth";
 import { auth } from '../util/firebase';
 import { useAuth } from '../context/authContext';
 import { useRouter } from 'next/router';
+import { getUserByEmail } from "../api/users";
+
 
 
 export default function LoginPage() {
@@ -32,18 +34,30 @@ export default function LoginPage() {
 
         if (validEmail) {
             signInWithEmailAndPassword(auth, email, password)
-            .then((userCredential) => {
-                setErrorMessage('');
+                .then((userCredential) => {
+                    setErrorMessage('');
 
-               console.log("entrou")
-                router.push('/'); 
+                    getUserByEmail(email).then(userData => {
+                        if (userData) {
+                            logIn(email);
 
-            })
-            .catch((error) => {
-                const errorCode = error.code;
-                const errorMessage = error.message;
-                setErrorMessage('Email ou senha incorretos');
-            });
+                        } else {
+                            console.log('Nenhum usuário encontrado com este e-mail.');
+                        }
+                    })
+                        .catch(error => {
+                            console.error('Erro ao buscar os dados do usuário:', error);
+                        });
+
+                    router.push('/');
+
+                })
+                .catch((error) => {
+                    console.log("erroouuuu")
+                    const errorCode = error.code;
+                    const errorMessage = error.message;
+                    setErrorMessage('Email ou senha incorretos');
+                });
         } else {
             console.error('Email inválido');
         }
@@ -60,31 +74,31 @@ export default function LoginPage() {
             <LoginCard>
 
                 <form className={styles.form} onSubmit={handleSubmit}>
-                    <Input type="email" 
-                    placeholder="E-mail"
-                    value={email}
-                    onChange={handleEmailChange}
-                     />
+                    <Input type="email"
+                        placeholder="E-mail"
+                        value={email}
+                        onChange={handleEmailChange}
+                    />
 
                     <Input type="password"
-                    placeholder="SENHA"
-                    value={password}
-                    onChange={handlePasswordChange}
-                     />
-                     {!validEmail && <p className={styles.errorMsg}> Email inválido </p>}
+                        placeholder="SENHA"
+                        value={password}
+                        onChange={handlePasswordChange}
+                    />
+                    {!validEmail && <p className={styles.errorMsg}> Email inválido </p>}
 
                     <div className={styles.container}>
                         <div className={styles.subButtons}>
                             <div>
                                 <input type="checkbox" className={styles.minhaCaixaDeSelecao} />
-                                <label for="minhaCaixaDeSelecao"></label>
+                                <label htmlFor="minhaCaixaDeSelecao"></label>
                                 <span className={styles.buttonLembrar}>Lembrar minha conta</span>
                             </div>
                             <Link href="/register"><button className={styles.buttonRegister}>Criar conta</button></Link>
                         </div>
                     </div>
 
-                    <Button> Entrar</Button>
+                    <Button>Entrar</Button>
                 </form>
             </LoginCard>
         </div>

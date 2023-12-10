@@ -1,7 +1,9 @@
-import styles from "";
+import styles from "./profileDiv.module.css";
 
-export default function ProfileDiv () {
+export function ProfileDiv () {
     return (
-
+        <div className={styles.profileDiv}>
+            <p>SAIR</p>
+        </div>
     );
 }

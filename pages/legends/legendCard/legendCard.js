@@ -33,7 +33,7 @@ export function CardLegend() {
 
     return (
         <div>
-            <SearchBar setSearch={setSearch} />,
+            <SearchBar setSearch={setSearch} />
             <div className={styles.cardsContainer}>
                 {filteredLegends.map((legend, index) => (
                     <Link
