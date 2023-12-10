@@ -1,6 +1,6 @@
 .divCards{
     min-width: 80%;
-    min-height: 100vh;
+    min-height: 88vh;
     display: flex;
     flex-wrap: wrap;
     justify-content: center;

@@ -1,7 +1,7 @@
 .navBar{
     background-color: black;
     opacity: 0.88;
-    min-width: 100vw;
+    min-width: 100%;
     min-height: 30%;
     display: flex;
     justify-content: space-between;
@@ -10,7 +10,8 @@
 
 .logoImagem{
     width: 8%;
-    margin-left: 2%;
+    margin: 0.2% 2%;
+    
     
 }
 
