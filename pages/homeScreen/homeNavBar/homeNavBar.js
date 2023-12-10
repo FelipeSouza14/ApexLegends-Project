@@ -3,36 +3,32 @@ import styles from "./homeNavBar.module.css";
 import { IoPersonCircleOutline } from "react-icons/io5";
 import { useAuth } from "../../../context/authContext";
 import { useRouter } from 'next/router';
-
+import { useState } from "react";
+import { ProfileDiv } from "./profileDiv";
+import { getValidEmail } from "../../login";
 
 
 export function HomeNavBar() {
     const { isLoggedIn } = useAuth();
+    const [open, setOpen] = useState('');
     const router = useRouter();
 
     const logged = () => {
         if (isLoggedIn) {
-            router.push('/login');
+            setOpen(true)
         }
         else {
-            return (
-                // className={styles.divProfile}
-                <div className={styles.divProfile}>
-                    <p>sair</p>
-                </div>
-            );
+            console.log(isLoggedIn)
+            router.push('/login');
         }
     }
 
     return (
         <nav className={styles.navBar}>
             <img className={styles.logoImagem} src={"/assets/logos/logo-sem-fundo.png"} />
-            <div>
-                <button className={styles.profileButton} onClick={logged}>
-                    <IoPersonCircleOutline size={45} />
-                </button>
-                {/* <Link href="/login"><button className={styles.buttonLogin}>Entrar</button></Link>  
-           <Link href="/register"><button className={styles. buttonSignin}>Criar conta</button></Link> */}
+            <div className={styles.profileButton} onClick={() => logged()}>
+                <IoPersonCircleOutline size={45} />
+                {open && <ProfileDiv />}
             </div>
         </nav>
     )
