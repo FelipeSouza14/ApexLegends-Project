@@ -3,19 +3,33 @@ import RegisterCard from "./components/loginCard/registerCard";
 import Input from "./components/input/input";
 import Button from "./components/button/button";
 import styles from "./styles/register.module.css";
-import { auth } from '../util/firebase';
+import { auth } from "../util/firebase";
 import { createUserWithEmailAndPassword } from "firebase/auth";
-import { useState } from 'react';
-import { useRouter } from 'next/router';
+import { useState } from "react";
+import { useRouter } from "next/router";
 import validator from "validator";
-
+import { addDoc, collection, getFirestore } from "firebase/firestore";
+import db from '../util/firebase';
 
 export default function RegisterPage() {
-    const [email, setEmail] = useState('');
+    const [email, setEmail] = useState("");
     const [validEmail, setValidEmail] = useState(true);
-    const [password, setPassword] = useState('');
+    const [password, setPassword] = useState("");
     const router = useRouter();
-    const [errorMessage, setErrorMessage] = useState('');
+    const [errorMessage, setErrorMessage] = useState("");
+
+    const addData = async (auth, email, password) => {
+        try {
+            const firestore = getFirestore(db);
+            const docRef = await addDoc(collection(firestore, "usuarios"), {
+                id: auth.lastNotifiedUid,
+                email: email,
+                senha: password,
+            });
+        } catch (e) {
+            console.error("Error adding document: ", e);
+        }
+    };
 
     const handleEmailChange = (e) => {
         const inputEmail = e.target.value;
@@ -27,30 +41,25 @@ export default function RegisterPage() {
 
     const handleSubmit = async (e) => {
         e.preventDefault();
-        console.log('Email:', validEmail);
+        console.log("Email:", validEmail);
 
         if (validEmail && password.length >= 8) {
             createUserWithEmailAndPassword(auth, email, password)
-            .then(() => {
-                setErrorMessage('');
-                console.log('Usuário criado com sucesso!');
-                router.push('/login'); 
-
-            })
-            .catch((error) => {
-                setErrorMessage('Email já está em uso');
-                
-            });
-        } 
-        else if (password.length < 6) {
-            setErrorMessage('Senha deve ter no mínimo 8 caracteres');
-        } 
-
-        else {
-            setErrorMessage('Email inválido');
+                .then(() => {
+                    setErrorMessage("");
+                    console.log("Usuário criado com sucesso!");
+                    router.push("/login");
+                })
+                .catch((error) => {
+                    setErrorMessage("Email já está em uso");
+                });
+            addData(auth, email, password);
+        } else if (password.length < 8) {
+            setErrorMessage("Senha deve ter no mínimo 8 caracteres");
+        } else {
+            setErrorMessage("Email inválido");
         }
     };
-
 
     const handlePasswordChange = (e) => {
         setPassword(e.target.value);
@@ -77,18 +86,20 @@ export default function RegisterPage() {
                             placeholder="SOBRENOME"
                         />
                     </div>
-                    <Input type="email" 
-                    placeholder="E-MAIL"                             
-                    value={email}
-                    onChange={handleEmailChange}
-/>
-                    <Input type="password" 
-                    placeholder="SENHA" 
-                    value={password}
-                    onChange={handlePasswordChange}
+                    <Input
+                        type="email"
+                        placeholder="E-MAIL"
+                        value={email}
+                        onChange={handleEmailChange}
+                    />
+                    <Input
+                        type="password"
+                        placeholder="SENHA"
+                        value={password}
+                        onChange={handlePasswordChange}
                     />
                     {!validEmail && <p> Email inválido </p>}
-                    {errorMessage &&<p >{errorMessage}</p>}
+                    {errorMessage && <p>{errorMessage}</p>}
 
                     <Button>ENVIAR</Button>
                 </form>

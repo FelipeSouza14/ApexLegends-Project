@@ -9,7 +9,7 @@ import { signInWithEmailAndPassword } from "firebase/auth";
 import { auth } from '../util/firebase';
 import { useAuth } from '../context/authContext';
 import { useRouter } from 'next/router';
-import { getUserByEmail } from "../api/users";
+import { getUserByEmail } from "../api/usersApi";
 
 
 
