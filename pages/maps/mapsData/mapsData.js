@@ -1,6 +1,7 @@
 import { useEffect, useState } from "react";
 import { getMapsData } from "../../../api/mapsApi";
 import { FavoriteButton } from "../../components/favoriteButton/favoriteButton";
+import { addFavorite } from "../../weapons/weaponsCategory/[weaponsCategory]";
 
 import styles from "./mapsData.module.css";
 
@@ -26,7 +27,18 @@ export function MapsData() {
                 <div key={index} className={styles.mapsData}>
                     <div className={styles.headDiv}>
                         <p className={styles.mapsName}>{map.nome}</p>
-                        <FavoriteButton size={40} />
+                        <div
+                            onClick={() =>
+                                addFavorite({
+                                    collectionName: "mapasFav",
+                                    id: map.id,
+                                    name: map.nome,
+                                    img: map.imagem,
+                                })
+                            }
+                        >
+                            <FavoriteButton size={40} />
+                        </div>
                     </div>
                     <img
                         className={styles.mapsImage}

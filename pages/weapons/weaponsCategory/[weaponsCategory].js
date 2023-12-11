@@ -10,47 +10,6 @@ export default function WeaponsCategory({ weaponsDetails }) {
 
     if (router.isFallback) return <div>Carregando...</div>;
 
-    const addFavorite = async (props) => {
-        const { id, img, name } = props;
-
-        try {
-            if (auth.currentUser) {
-                let getId = id;
-                let existsId = false;
-
-                const querySnapshot = await getDocs(collection(db, "armasFav"));
-
-                try {
-                    querySnapshot.forEach((doc) => {
-                        if (doc.data().id === getId) {
-                            existsId = true;
-                            throw new Error("StopIteration");
-                        }
-                    });
-                } catch (e) {
-                    if (e.message !== "StopIteration") {
-                        throw e;
-                    }
-                }
-
-                if (existsId === false) {
-                    await addDoc(collection(db, "armasFav"), {
-                        email: auth.currentUser.email,
-                        id: getId,
-                        name: name,
-                        image: img,
-                    });
-                } else {
-                    alert("O item já foi favoritado!");
-                }
-            } else {
-                alert("Usuário inexistente ou não conectado!");
-            }
-        } catch (error) {
-            alert("Erro. Não foi possivel continuar!");
-        }
-    };
-
     return (
         <div className={styles.containerWeapons}>
             {weaponsDetails.map((weapons, index) => {
@@ -66,6 +25,7 @@ export default function WeaponsCategory({ weaponsDetails }) {
                                 <div
                                     onClick={() =>
                                         addFavorite({
+                                            collectionName: "armasFav",
                                             id: weapons.id,
                                             name: weapons.nome,
                                             img: weapons.imagem,
@@ -82,6 +42,47 @@ export default function WeaponsCategory({ weaponsDetails }) {
         </div>
     );
 }
+
+export const addFavorite = async (props) => {
+    const { id, img, name, collectionName } = props;
+
+    try {
+        if (auth.currentUser) {
+            let getId = id;
+            let existsId = false;
+
+            const querySnapshot = await getDocs(collection(db, collectionName));
+
+            try {
+                querySnapshot.forEach((doc) => {
+                    if (doc.data().id === getId) {
+                        existsId = true;
+                        throw new Error("StopIteration");
+                    }
+                });
+            } catch (e) {
+                if (e.message !== "StopIteration") {
+                    throw e;
+                }
+            }
+
+            if (existsId === false) {
+                await addDoc(collection(db, collectionName), {
+                    email: auth.currentUser.email,
+                    id: getId,
+                    name: name,
+                    image: img,
+                });
+            } else {
+                alert("O item já foi favoritado!");
+            }
+        } else {
+            alert("Usuário inexistente ou não conectado!");
+        }
+    } catch (error) {
+        alert("Erro. Não foi possivel continuar!");
+    }
+};
 
 export async function getServerSideProps(context) {
     const { weaponsCategory } = context.params; // Desestruturação do objeto

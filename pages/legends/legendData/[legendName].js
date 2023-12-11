@@ -1,6 +1,7 @@
 import { useRouter } from "next/router";
 import { FavoriteButton } from "../../components/favoriteButton/favoriteButton";
 import { getLegendsData } from "../../../api/legendsApi";
+import { addFavorite } from "../../weapons/weaponsCategory/[weaponsCategory]";
 
 import styles from "./legendData.module.css";
 
@@ -20,7 +21,18 @@ export default function LegendData({ legendDetails }) {
                                 {legendDetails.titulo}
                             </p>
                         </div>
-                        <FavoriteButton size={35} />
+                        <div
+                            onClick={() =>
+                                addFavorite({
+                                    collectionName: "lendasFav",
+                                    id: legendDetails.id,
+                                    name: legendDetails.nome,
+                                    img: legendDetails.imagem,
+                                })
+                            }
+                        >
+                            <FavoriteButton size={35} />
+                        </div>
                     </div>
 
                     <div className={styles.legendInfo}>
