@@ -9,7 +9,7 @@ import { useState } from "react";
 import { useRouter } from "next/router";
 import validator from "validator";
 import { addDoc, collection, getFirestore } from "firebase/firestore";
-import db from '../util/firebase';
+import { db } from "../util/firebase";
 
 export default function RegisterPage() {
     const [email, setEmail] = useState("");
@@ -19,7 +19,7 @@ export default function RegisterPage() {
     const [errorMessage, setErrorMessage] = useState("");
     const [name, setName] = useState("");
     const [lastName, setLastName] = useState("");
-    
+
     const addData = async (auth, email, password, name, lastName) => {
         try {
             const firestore = getFirestore(db);
@@ -28,7 +28,7 @@ export default function RegisterPage() {
                 email: email,
                 senha: password,
                 nome: name,
-                sobrenome: lastName
+                sobrenome: lastName,
             });
         } catch (e) {
             console.error("Error adding document: ", e);
