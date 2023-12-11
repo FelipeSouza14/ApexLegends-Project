@@ -30,12 +30,12 @@
     left: 2%;
 }
 
-/* .profileDiv p {
+.profileDiv p {
     font-size: 30px;
     font-family: 'Duke Fill';
     margin: 0;
     margin-bottom: 5%;
-} */
+}
 
 .logOutButton {
     background: transparent;
