@@ -4,9 +4,6 @@ import { getLegendsData } from "../../../api/legendsApi";
 import styles from "./legendCard.module.css";
 import { SearchBar } from "../searchBar/searchBar";
 
-
-
-
 export function CardLegend() {
     const [legendsData, setLegendsData] = useState([]);
     const [search, setSearch] = useState("");
@@ -24,11 +21,10 @@ export function CardLegend() {
         fetchData();
     }, []);
 
-
-    const filteredLegends = legendsData.filter((legend) =>
-        legend.nome.toLowerCase().includes(search.toLowerCase()) ||
-        legend.classe.toLowerCase().includes(search.toLowerCase())
-
+    const filteredLegends = legendsData.filter(
+        (legend) =>
+            legend.nome.toLowerCase().includes(search.toLowerCase()) ||
+            legend.classe.toLowerCase().includes(search.toLowerCase())
     );
 
     return (

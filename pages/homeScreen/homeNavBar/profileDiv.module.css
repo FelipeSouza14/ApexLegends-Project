@@ -1,4 +1,4 @@
-.profileDiv{
+.profileDiv {
     position: absolute;
     width: 20%;
     min-height: 100vh;
@@ -13,14 +13,14 @@
     top: 0;
 }
 
-.profileIcon{
+.profileIcon {
     position: absolute;
     width: 50%;
     height: 50%;
     bottom: 60%;
 }
 
-.closeButton{
+.closeButton {
     position: absolute;
     background: transparent;
     color: white;
@@ -30,3 +30,22 @@
     left: 2%;
 }
 
+.profileDiv p {
+    font-size: 30px;
+    font-family: 'Duke Fill';
+    margin: 0;
+    margin-bottom: 5%;
+}
+
+.logOutButton {
+    background: transparent;
+    border: none;
+    color: white;
+    cursor: pointer;
+    font-family: 'Duke Fill';
+    font-size: 30px;
+    display: flex;
+    justify-content: center;
+    align-items: center;
+    gap: 10%;    
+}
