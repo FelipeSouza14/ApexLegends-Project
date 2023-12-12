@@ -64,7 +64,12 @@ export default function MyLoadLegendsData() {
                             width={350}
                             alt={`Imagem de ${legend.nome}`}
                         />
-                        <figcaption>{legend.name} <MdDelete onClick={() => deleteFav({ id: legend.docId })} /></figcaption>
+                        <figcaption>
+                            {legend.name}
+                            <div className={styles.deleteButton}>
+                                <MdDelete onClick={() => deleteFav({ id: legend.docId })} />
+                            </div>
+                        </figcaption>
                     </figure>
                 ))}
         </div>
