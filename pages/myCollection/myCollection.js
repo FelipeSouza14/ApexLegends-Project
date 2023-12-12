@@ -1,9 +1,10 @@
 import MyNavBar from "./myNavBar/myNavBar";
 import styles from "./myCollection.module.css";
-import MyLoadLegendsData from "./myloadDatas/myLoadDatas";
+import MyLoadLegendsData from "./myLoadDatas/myLoadLegends";
 import { useState } from "react";
 import { auth } from "../../util/firebase";
 import MyLoadWeaponsData from "./myLoadDatas/myLoadWeapons";
+import MyLoadMapsData from "./myLoadDatas/myLoadMaps";
 
 
 export default function MyCollection() {
@@ -19,19 +20,24 @@ export default function MyCollection() {
     //     setOpenFavWeapons(showCollection);
     // };
 
-    const decidir = () =>{
-        if (paginaAtual === 1){
+    const decidir = () => {
+        if (paginaAtual === 1) {
             return <MyLoadLegendsData />
         }
-        else if (paginaAtual === 2){
+        else if (paginaAtual === 2) {
             return <MyLoadWeaponsData />
         }
+        else if (paginaAtual === 3) {
+            return <MyLoadMapsData />
+        }
     }
-    
-    return(
+
+    return (
         <div className={styles.myCollection}>
-            <MyNavBar stateAuth={auth.currentUser} statePage={setPaginaAtual}/>
-            {decidir()}
+            <MyNavBar stateAuth={auth.currentUser} statePage={setPaginaAtual} />
+            <div className={styles.container}>
+                {decidir()}
+            </div>
         </div>
     );
 }

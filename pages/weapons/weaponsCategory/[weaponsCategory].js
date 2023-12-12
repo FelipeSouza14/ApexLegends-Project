@@ -55,7 +55,7 @@ export const addFavorite = async (props) => {
 
             try {
                 querySnapshot.forEach((doc) => {
-                    if (doc.data().id === getId) {
+                    if (doc.data().id === getId && auth.currentUser.email === doc.data().email) {
                         existsId = true;
                         throw new Error("StopIteration");
                     }

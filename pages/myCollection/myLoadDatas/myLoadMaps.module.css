@@ -1,0 +1,35 @@
+.mapsImage{
+    width: 100%;
+    height: 50%;
+    border-radius: 5px;
+}
+
+.divMaps{
+    display: flex;
+    justify-content: center;
+    align-items: center;
+    flex-direction: column;
+    max-width: 80%;
+    flex-wrap: wrap;
+}
+
+.mapsName{
+    color: white;
+    font-family: "Duke Fill";
+    font-size: 32px;
+}
+
+.deleteButton{
+    cursor: pointer;
+    color: white;
+}
+
+.headDiv{
+    display: flex;
+    justify-content: space-between;
+    align-items: center;
+}
+
+.mapsData{
+    padding: 4%;
+}

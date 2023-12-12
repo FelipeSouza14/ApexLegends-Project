@@ -30,7 +30,7 @@ export default function MyNavBar({stateAuth, statePage}) {
             <div className={styles.divMyButtons}>
                 <button className={styles.myNavButton} onClick={() => mudarPagina(1)}>Lendas</button>
                 <button className={styles.myNavButton} onClick={() => mudarPagina(2)}>Armas</button>
-                <button className={styles.myNavButton}>Mapas</button>
+                <button className={styles.myNavButton} onClick={() => mudarPagina(3)}>Mapas</button>
             </div>
         </nav>
     );
