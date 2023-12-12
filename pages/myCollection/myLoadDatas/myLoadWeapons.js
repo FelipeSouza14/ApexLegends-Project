@@ -5,15 +5,15 @@ import { deleteDoc, doc, getDocs, collection, query, where } from "firebase/fire
 import { MdDelete } from "react-icons/md";
 
 
-export default function MyLoadLegendsData() {
-    const [myLegendsData, setMyLegendsData] = useState([]);
+export default function MyLoadWeaponsData() {
+    const [myWeaponsData, setMyWeaponsData] = useState([]);
     let hasUser = true;
 
     try {
         const loadData = async () => {
             if (auth.currentUser) {
                 let newData = []
-                const legendsCollection = collection(db, "lendasFav")
+                const legendsCollection = collection(db, "armasFav")
                 const legendsQuery = query(legendsCollection, where('email', '==', auth.currentUser.email))
                 const querySnapshot = await getDocs(legendsQuery);
 
@@ -22,14 +22,14 @@ export default function MyLoadLegendsData() {
                     let docData = doc.data();
                     newData.push({ image: docData.image, name: docData.name, docId: doc.id });
                 })
-                setMyLegendsData(newData)
+                setMyWeaponsData(newData)
 
             }
             else {
                 hasUser = false
             }
         }
-        if (myLegendsData.length == 0) {
+        if (myWeaponsData.length == 0) {
             loadData()
         }
     } catch (error) {
@@ -44,8 +44,8 @@ export default function MyLoadLegendsData() {
                 console.log('entrou no delete')
                 console.log(id);
 
-                await deleteDoc(doc(db, "lendasFav", id));
-                setMyLegendsData(myLegendsData.filter((i) => i.docId !== id))
+                await deleteDoc(doc(db, "armasFav", id));
+                setMyWeaponsData(myWeaponsData.filter((i) => i.docId !== id))
             }
             else {
                 console.log("usuario nao encontrado")
@@ -57,7 +57,7 @@ export default function MyLoadLegendsData() {
     return (
         <div className={styles.divLegends}>
             {
-                myLegendsData.map((legend, index) => (
+                myWeaponsData.map((legend, index) => (
                     <figure className={styles.figureContainer} key={index}>
                         <img
                             src={legend.image}
