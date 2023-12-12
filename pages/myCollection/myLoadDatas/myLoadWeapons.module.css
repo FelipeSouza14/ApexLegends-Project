@@ -1,0 +1,109 @@
+.divWeapons{
+    display: flex;
+    justify-content: center;
+    align-items: center;
+    flex-wrap: wrap;
+    margin-top: 10%;
+    gap: 20px;
+}
+
+.nomes {
+    font-family: 'Duke Fill';
+    text-transform: uppercase;
+    font-size: 30px;
+    margin: 0;
+}
+
+.deleteButton{
+    cursor: pointer;
+}
+
+.divFavoriteButton {
+    display: flex;
+    align-items: center;
+    justify-content: space-between;    
+    width: 80%;
+}
+
+.frontDiv img {
+    width: 200px;
+    margin: 6%;
+}
+
+.backDiv{
+    display: flex;
+    width: 304px;
+    height: 172px;
+    align-content: center;
+    justify-items: center;
+    align-items: center;
+    text-align: center;
+    background-color: white;
+    filter: blur(0.5px);
+    -webkit-clip-path: polygon(
+      26% 0,
+      66% 0,
+      92% 0,
+      100% 8%,
+      100% 89%,
+      91% 100%,
+      7% 100%,
+      0 92%,
+      0 0
+    );
+    clip-path: polygon(
+      26% 0,
+      66% 0,
+      92% 0,
+      100% 8%,
+      100% 89%,
+      91% 100%,
+      7% 100%,
+      0 92%,
+      0 0
+    );
+}
+
+
+.frontDiv{
+    display: flex;
+    justify-content: center;
+    align-items: center;
+    flex-direction: column;
+    color: white;
+    margin-left: 1%;
+    width: 298px;
+    height: 168px;
+    background: rgba(0, 0, 0, 0.9);
+    -webkit-clip-path: polygon(
+      26% 0,
+      31% 5%,
+      61% 5%,
+      66% 0,
+      92% 0,
+      100% 8%,
+      100% 89%,
+      91% 100%,
+      7% 100%,
+      0 92%,
+      0 0
+    );
+    clip-path: polygon(
+      26% 0,
+      31% 5%,
+      61% 5%,
+      66% 0,
+      92% 0,
+      100% 8%,
+      100% 89%,
+      91% 100%,
+      7% 100%,
+      0 92%,
+      0 0
+    );
+}
+
+.imageStyle{
+    width: 30%;
+    height: 80px;
+}
