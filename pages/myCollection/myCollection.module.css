@@ -1,0 +1,10 @@
+.myCollection{
+    background-image: url(/assets/bgs/bg-tela-armas-classe-80_.png);
+    background-size: cover;
+    background-repeat: no-repeat;
+    background-attachment: fixed;
+    min-height: 100vh;
+    flex-wrap: wrap;
+    gap: 2%;
+    user-select: none;
+}

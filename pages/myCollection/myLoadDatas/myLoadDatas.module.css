@@ -1,0 +1,17 @@
+.figureContainer figcaption {
+    font-family: "Duke Fill";
+    font-size: 32px;
+    color: white;
+    display: flex;
+    flex-direction: column;
+    justify-content: center;
+    align-items: center;
+}
+
+.divLegends{
+    display: flex;
+    justify-content: center;
+    align-items: center;
+    flex-wrap: wrap;
+    gap: 20px;
+}

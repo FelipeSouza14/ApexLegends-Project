@@ -1,0 +1,22 @@
+.myNavBar{
+    background-color: black;
+    opacity: 0.88;
+    min-width: 100%;
+    min-height: 30%;
+    display: flex;
+    justify-content: space-between;
+    align-items: center;
+}
+
+.logoImagem{
+    width: 8%;
+    margin: 0.2% 2%;
+}
+
+.divMyButtons{
+    display: flex;
+    justify-content: center;
+    align-items: center;
+    gap: 10%;
+    margin-right: 45%;
+}
