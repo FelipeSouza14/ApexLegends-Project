@@ -10,7 +10,7 @@ export function ProfileDiv({ onClose }) {
     return (
         <div className={styles.profileDiv}>
             <IoPersonCircleOutline size={45} className={styles.profileIcon} />
-            <p>MINHA COLEÇÃO</p>
+            <button className={styles.collectionButton}>MINHA COLEÇÃO</button>
             <button className={styles.logOutButton} onClick={logOut}>
                 SAIR
                 <IoExitOutline size={30} />
