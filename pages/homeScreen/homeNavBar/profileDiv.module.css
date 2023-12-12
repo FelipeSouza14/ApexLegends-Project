@@ -49,3 +49,24 @@
     align-items: center;
     gap: 10%;    
 }
+
+.logOutButton:hover{
+    transform: scale(1.1);
+    opacity: 0.8;
+    color: red;
+}
+
+.collectionButton{
+    background: transparent;
+    color: white;
+    font-family: "Duke Fill";
+    font-size: 30px;
+    cursor: pointer;
+    border: none;
+}
+
+.collectionButton:hover{
+    transform: scale(1.1);
+    opacity: 0.8;
+    color: red;
+}

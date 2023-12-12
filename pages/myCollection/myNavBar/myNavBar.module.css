@@ -21,3 +21,23 @@
     gap: 10%;
     margin-right: 45%;
 }
+
+.myNavButton{
+    background: transparent;
+    color: white;
+    font-family: "Duke Fill";
+    font-size: 200%;
+    border: none;
+}
+
+.myNavButton:hover{
+    transform: scale(1.15);
+    color: red;
+    cursor: pointer;
+}
+
+.userCollection{
+    color: white;
+    font-size: 200%;
+    
+}
