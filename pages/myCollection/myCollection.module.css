@@ -1,0 +1,16 @@
+.myCollection{
+    background-color: rgba(31,31,31);
+    background-size: cover;
+    background-repeat: no-repeat;
+    background-attachment: fixed;
+    min-height: 100vh;
+    flex-wrap: wrap;
+    gap: 2%;
+    user-select: none;
+}
+
+.container{
+    display: flex;
+    justify-content: center;
+    align-items: center;
+}

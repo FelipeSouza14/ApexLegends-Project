@@ -3,6 +3,8 @@ import { IoPersonCircleOutline } from "react-icons/io5";
 import { IoIosCloseCircle } from "react-icons/io";
 import { IoExitOutline } from "react-icons/io5";
 import { useAuth } from "../../../context/authContext";
+import Link from "next/link";
+
 
 export function ProfileDiv({ onClose }) {
     const { logOut } = useAuth();
@@ -10,7 +12,9 @@ export function ProfileDiv({ onClose }) {
     return (
         <div className={styles.profileDiv}>
             <IoPersonCircleOutline size={45} className={styles.profileIcon} />
-            <p>MINHA COLEÇÃO</p>
+            <Link href={`/myCollection/myCollection`}>
+                <button className={styles.collectionButton}>MINHA COLEÇÃO</button>
+            </Link>
             <button className={styles.logOutButton} onClick={logOut}>
                 SAIR
                 <IoExitOutline size={30} />
