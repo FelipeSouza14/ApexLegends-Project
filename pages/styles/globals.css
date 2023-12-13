@@ -1,8 +1,3 @@
-@font-face {
-    font-family: 'Duke Fill';
-    src: url('/assets/Duke_Fill.otf') format('otf');
-  }
-
 body {
     padding: 0;
     margin: 0;
