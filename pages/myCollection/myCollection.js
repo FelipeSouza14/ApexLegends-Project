@@ -5,12 +5,20 @@ import { useState } from "react";
 import { auth } from "../../util/firebase";
 import MyLoadWeaponsData from "./myLoadDatas/myLoadWeapons";
 import MyLoadMapsData from "./myLoadDatas/myLoadMaps";
+import { GoAlertFill } from "react-icons/go";
 
 export default function MyCollection() {
     const [presentPage, setPresentPage] = useState(0);
 
     const setPage = () => {
-        if (presentPage === 1) {
+        if (presentPage === 0) {
+            return (
+                <h1 className={styles.placeholder}>
+                    Escolha a coleção que deseja ver
+                    <GoAlertFill />
+                </h1>
+            );
+        } else if (presentPage === 1) {
             return <MyLoadLegendsData />;
         } else if (presentPage === 2) {
             return <MyLoadWeaponsData />;

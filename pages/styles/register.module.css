@@ -43,10 +43,21 @@
 .conectP {
     font-family: "Duke Fill";
     font-size: 20px;
+    margin: 0;
+    margin-top: 3%;
 }
 
 .linkLoginPage {
     text-decoration: none;
     color: #DA292A;
     padding-left: 5px;
+}
+
+.errorMsg {
+    margin: 0;
+    font-family: 'TT Lakes Neue Trl Cmd';
+    font-size: 18px;
+    color: #DA292A;
+    font-weight: bold;
+    text-align: center;
 }
