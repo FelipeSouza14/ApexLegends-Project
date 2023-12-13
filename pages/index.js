@@ -1,9 +1,9 @@
 import styles from "./styles/index.module.css";
 import { useAuth } from "../context/authContext";
-import { HomeNavBar } from "./homeScreen/homeNavBar/homeNavBar";
-import { HomeCards } from "./homeScreen/homeCards/homeCards";
+import HomeNavBar from "./homeScreen/homeNavBar/homeNavBar";
+import HomeCards from "./homeScreen/homeCards/homeCards";
 import { useState } from "react";
-import { ProfileDiv } from "./homeScreen/homeNavBar/profileDiv";
+import ProfileDiv from "./homeScreen/homeNavBar/profileDiv";
 
 export default function Main() {
     const [open, setOpen] = useState(false);

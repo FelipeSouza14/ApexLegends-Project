@@ -1,5 +1,5 @@
 import { useRouter } from "next/router";
-import { FavoriteButton } from "../../components/favoriteButton/favoriteButton";
+import FavoriteButton from "../../components/favoriteButton/favoriteButton";
 import { getLegendsData } from "../../../api/legendsApi";
 import { addFavorite } from "../../weapons/weaponsCategory/[weaponsCategory]";
 

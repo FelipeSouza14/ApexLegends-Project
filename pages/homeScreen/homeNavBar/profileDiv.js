@@ -5,8 +5,7 @@ import { IoExitOutline } from "react-icons/io5";
 import { useAuth } from "../../../context/authContext";
 import Link from "next/link";
 
-
-export function ProfileDiv({ onClose }) {
+export default function ProfileDiv({ onClose }) {
     const { logOut } = useAuth();
 
     return (

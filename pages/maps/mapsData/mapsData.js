@@ -1,11 +1,11 @@
 import { useEffect, useState } from "react";
 import { getMapsData } from "../../../api/mapsApi";
-import { FavoriteButton } from "../../components/favoriteButton/favoriteButton";
+import FavoriteButton from "../../components/favoriteButton/favoriteButton";
 import { addFavorite } from "../../weapons/weaponsCategory/[weaponsCategory]";
 
 import styles from "./mapsData.module.css";
 
-export function MapsData() {
+export default function MapsData() {
     const [mapsData, setMapsData] = useState([]);
 
     useEffect(() => {

@@ -1,15 +1,13 @@
-import Link from "next/link";
 import styles from "./homeCards.module.css";
 import { useRouter } from "next/router";
 import { useAuth } from "../../../context/authContext";
-import { useState } from "react";
 
-export function HomeCards() {
+export default function HomeCards() {
     const { isLoggedIn } = useAuth();
     const router = useRouter();
-    const [legendsScreen, setLegendsScreen] = useState("/legends/legendsPage");
-    const [weaponsScreen, setWeaponsScreen] = useState("../weapons/weaponsPage");
-    const [mapsScreen, setMapsScreen] = useState("../maps/mapsPage");
+    const legendsScreen = "/legends/legendsPage";
+    const weaponsScreen = "../weapons/weaponsPage";
+    const mapsScreen = "../maps/mapsPage";
 
     const logged = (screen) => {
         if (isLoggedIn) {

@@ -1,5 +1,5 @@
 import { getWeaponsData } from "../../../api/weapons";
-import { FavoriteButton } from "../../components/favoriteButton/favoriteButton";
+import FavoriteButton from "../../components/favoriteButton/favoriteButton";
 import { useRouter } from "next/router";
 import styles from "./weaponsCategory.module.css";
 import { db, auth } from "../../../util/firebase";
