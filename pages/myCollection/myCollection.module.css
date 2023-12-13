@@ -26,3 +26,13 @@
     min-height: 100vh;
     box-shadow: 6px 6px rgb(12, 12, 12);
 }
+
+.placeholder {
+    font-family: "Duke Fill";
+    color: white;
+    font-size: 400%;
+    display: flex;
+    align-items: center;
+    justify-content: center;
+    gap: 1rem;
+}

@@ -114,8 +114,8 @@ export default function RegisterPage() {
                         value={password}
                         onChange={handlePasswordChange}
                     />
-                    {!validEmail && <p> Email inválido </p>}
-                    {errorMessage && <p>{errorMessage}</p>}
+                    {!validEmail && <p className={styles.errorMsg}> Email inválido </p>}
+                    {errorMessage && <p className={styles.errorMsg}>{errorMessage}</p>}
 
                     <Button>ENVIAR</Button>
                 </form>
