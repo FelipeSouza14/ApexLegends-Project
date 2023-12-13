@@ -13,7 +13,7 @@ export const AuthProvider = ({ children }) => {
 
     const logOut = () => {
         setIsLoggedIn(false);
-        console.log("Deslogado");
+        alert("Você foi deslogado!");
     };
 
     return (
