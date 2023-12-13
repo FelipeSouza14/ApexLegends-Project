@@ -1,6 +1,6 @@
 @font-face {
     font-family: 'Duke Fill';
-    src: url('/assets/Duke_Fill.otf') format('otf');
+    src: url(/assets/Duke_Fill.otf) format('otf');
   }
 
 .background{
