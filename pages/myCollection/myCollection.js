@@ -6,37 +6,24 @@ import { auth } from "../../util/firebase";
 import MyLoadWeaponsData from "./myLoadDatas/myLoadWeapons";
 import MyLoadMapsData from "./myLoadDatas/myLoadMaps";
 
-
 export default function MyCollection() {
-    // const [openFavLegends, setOpenFavLegends] = useState('');
-    // const [openFavWeapons, setOpenFavWeapons] = useState('');
-    const [paginaAtual, setPaginaAtual] = useState(0);
+    const [presentPage, setPresentPage] = useState(0);
 
-    // const handleLendasButtonClick = (showCollection) => {
-    //     setOpenFavLegends(showCollection);
-    // };
-
-    // const handleWeaponsButtonClick = (showCollection) => {
-    //     setOpenFavWeapons(showCollection);
-    // };
-
-    const decidir = () => {
-        if (paginaAtual === 1) {
-            return <MyLoadLegendsData />
+    const setPage = () => {
+        if (presentPage === 1) {
+            return <MyLoadLegendsData />;
+        } else if (presentPage === 2) {
+            return <MyLoadWeaponsData />;
+        } else if (presentPage === 3) {
+            return <MyLoadMapsData />;
         }
-        else if (paginaAtual === 2) {
-            return <MyLoadWeaponsData />
-        }
-        else if (paginaAtual === 3) {
-            return <MyLoadMapsData />
-        }
-    }
+    };
 
     return (
         <div className={styles.myCollection}>
-            <MyNavBar stateAuth={auth.currentUser} statePage={setPaginaAtual} />
+            <MyNavBar stateAuth={auth.currentUser} statePage={setPresentPage} />
             <div className={styles.container}>
-                {decidir()}
+                <div className={styles.containerPage}>{setPage()}</div>
             </div>
         </div>
     );

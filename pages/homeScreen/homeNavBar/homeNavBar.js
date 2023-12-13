@@ -2,7 +2,7 @@ import styles from "./homeNavBar.module.css";
 import { IoPersonCircleOutline } from "react-icons/io5";
 import { useRouter } from "next/router";
 
-export function HomeNavBar({ isLoggedIn, onProfileButtonClick }) {
+export default function HomeNavBar({ isLoggedIn, onProfileButtonClick }) {
     const router = useRouter();
 
     const logged = () => {

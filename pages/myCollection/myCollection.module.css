@@ -1,5 +1,5 @@
 .myCollection{
-    background-color: rgba(31,31,31);
+    background-color: rgba(60,60,60);
     background-size: cover;
     background-repeat: no-repeat;
     background-attachment: fixed;
@@ -13,4 +13,16 @@
     display: flex;
     justify-content: center;
     align-items: center;
+}
+
+.containerPage {
+    background-color: rgba(20,20,20);
+    width: 90%;
+    display: flex;
+    align-items: center;
+    justify-content: center;
+    margin: 3% 0;
+    border-radius: 50px;
+    min-height: 100vh;
+    box-shadow: 6px 6px rgb(12, 12, 12);
 }

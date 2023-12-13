@@ -39,26 +39,19 @@ export default function LoginPage() {
                         .then((userData) => {
                             if (userData) {
                                 logIn(email);
+                                router.push("/");
                             } else {
-                                console.log(
-                                    "Nenhum usuário encontrado com este e-mail."
-                                );
+                                setErrorMessage('Nenhum usuário encontrado com este e-mail.');
                             }
                         })
                         .catch((error) => {
-                            console.error(
-                                "Erro ao buscar os dados do usuário:",
-                                error
-                            );
+                            setErrorMessage('Erro ao buscar os dados do usuário:', error);
                         });
-
-                    router.push("/");
                 })
                 .catch((error) => {
-                    console.log("erroouuuu");
                     const errorCode = error.code;
                     const errorMessage = error.message;
-                    setErrorMessage("Email ou senha incorretos");
+                    setErrorMessage('Email ou senha incorretos');
                 });
         } else {
             console.error("Email inválido");
@@ -91,8 +84,7 @@ export default function LoginPage() {
                     )}
 
                     <div className={styles.container}>
-                        <div className={styles.subButtons}>
-                            <div>
+                            {/* <div>
                                 <input
                                     type="checkbox"
                                     className={styles.minhaCaixaDeSelecao}
@@ -101,15 +93,17 @@ export default function LoginPage() {
                                 <span className={styles.buttonLembrar}>
                                     Lembrar minha conta
                                 </span>
-                            </div>
-                            <Link href="/register">
-                                <button className={styles.buttonRegister}>
-                                    Criar conta
-                                </button>
-                            </Link>
-                        </div>
+                            </div> */}
+                            {errorMessage && <p className={styles.errorMsg}>{errorMessage}</p>}
+                            <Button>Entrar</Button>
                     </div>
-                    <Button>Entrar</Button>
+
+                    <button className={styles.buttonRegister}>
+                        Ainda não tem uma conta?
+                        <Link href="/register" className={styles.linkRegister}>
+                            Criar conta
+                        </Link>
+                    </button>
                 </form>
             </LoginCard>
         </div>

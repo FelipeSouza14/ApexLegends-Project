@@ -1,5 +1,5 @@
 import styles from "./mapsPage.module.css";
-import { MapsData } from "./mapsData/mapsData";
+import MapsData from "./mapsData/mapsData";
 
 export default function MapsPage() {
     return (

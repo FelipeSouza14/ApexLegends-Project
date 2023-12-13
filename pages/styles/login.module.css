@@ -1,3 +1,5 @@
+@import url('https://fonts.cdnfonts.com/css/tt-lakes-neue-trial');
+
 .background{
     background-image: url(/assets/bgs/bg-tela-login-cadastro.png);
     background-color: rgb(21, 21, 21);
@@ -23,16 +25,21 @@
     margin-right: 10px;
     position: absolute;
     top: 100px;
-
 }
 
 .buttonRegister{
     background-color: transparent;
-    cursor: pointer;
     font-size: 22px;
     font-family: "Duke Fill";
     color: white;
     border: 0;
+}
+
+.linkRegister {
+    color: #DA292A;
+    text-decoration: none;
+    padding-left: 5px;
+    cursor: pointer;
 }
 
 .buttonLembrar{
@@ -45,9 +52,9 @@
 
 .container {
     display: flex;
+    flex-direction: column;
     margin-right: 10px; 
-
-  }
+}
 
 .minhaCaixaDeSelecao{
     width: 15px;
@@ -55,8 +62,11 @@
     cursor: pointer;
 }
 
-.subButtons{
-    display: flex;
-    gap: 170px;
-    margin-top: 5px;
+.errorMsg {
+    margin: 0;
+    font-family: 'TT Lakes Neue Trl Cmd';
+    font-size: 20px;
+    color: #DA292A;
+    font-weight: bold;
+    text-align: center;
 }

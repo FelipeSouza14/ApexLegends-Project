@@ -1,7 +1,7 @@
 import { BiSearch } from "react-icons/bi";
 import styles from "./searchBar.module.css";
 
-export function SearchBar({ setSearch }) {
+export default function SearchBar({ setSearch }) {
     return (
         <div className={styles.containerSearchBar}>
             <input

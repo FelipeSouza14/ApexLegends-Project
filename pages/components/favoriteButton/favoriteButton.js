@@ -2,7 +2,7 @@ import { useState } from "react";
 import { MdFavoriteBorder, MdFavorite } from "react-icons/md";
 import styles from "./favoriteButton.module.css";
 
-export function FavoriteButton({ size }) {
+export default function FavoriteButton({ size }) {
     const [isFavorite, setIsFavorite] = useState(false);
 
     const handleButtonClick = () => {
