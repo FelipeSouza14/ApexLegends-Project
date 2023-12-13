@@ -1,4 +1,9 @@
 @import url('https://fonts.cdnfonts.com/css/tt-lakes-neue-trial');
+@font-face {
+    font-family: 'Duke Fill';
+    src: url('/assets/Duke_Fill.otf') format('otf');
+  }
+
 
 .background{
     background-image: url(/assets/bgs/bg-tela-login-cadastro.png);

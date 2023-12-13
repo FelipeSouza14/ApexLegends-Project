@@ -1,3 +1,8 @@
+@font-face {
+    font-family: 'Duke Fill';
+    src: url('/assets/Duke_Fill.otf') format('otf');
+  }
+
 .background{
     background: linear-gradient(180deg, rgba(218, 41, 42) 15.1%, rgba(0, 0, 0) 100%);    
     min-height: 100vh;
