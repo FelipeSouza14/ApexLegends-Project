@@ -11,7 +11,7 @@ Projeto voltado à disciplina de Programação Web do curso de Sistemas de Infor
 
 ## 📚 Sobre o projeto
 <div align="justify">
-O sistema web desenvolvido é baseado em um jogo de FPS(First Person Shootieg) chamado Apex Legends, disponível na EA Play. O seguinte site 
+O sistema web desenvolvido é baseado em um jogo de FPS (First Person Shootieg) chamado Apex Legends, disponível na EA Play. O seguinte site 
 funciona tendo uma tela inicial, a qual possibilita ao usuário a navegação entre a tela de lendas (personagens), armas, mapas, login e minha coleção. Caso o 
 usuário já possua uma conta e esteja logado, ele poderá acessar todas as telas disponíveis, caso contrário, será redirecionado à página de login,
 para que assim, possa entrar em sua conta. Entretanto, se o usuário não for cadastrado e não possuir uma conta, será preciso que o mesmo realize 
@@ -25,12 +25,12 @@ Na tela de armas serão exibidos alguns cards que representam a classe das armas
 à página onde são exibidas as armas da classe escolhida. Além disso, o sistema também permite favoritar as armas que mais o agradem.
 <br><br>
 Na tela de mapas, diferente das outras, ela apenas lista os mapas que compõem a ambientação do jogo com a opção de favoritá-los. E, por último, o site permite que
-o usuário, a partir da tela inicial, possa visualizar a sua própria coleção, onde serão mostrados todos os itens favoritados de acordo com a coleção escolhida
-"lendas", "armas" ou "mapas".
+o usuário, a partir da tela inicial, possa escolher visualizar a sua própria coleção, onde serão mostrados todos os itens favoritados de acordo com a coleção escolhida
+"lendas", "armas" ou "mapas", contendo, em cada card da tela de "minha coleção", a opção de exclusão dos favoritos.
 </div>
 
 ## 🛠️ Como acessar?
-* O site já está disponível e no ar para acesso livre, basta clicar neste link: [apex-legends-project.vercel.app](apex-legends-project.vercel.app)
+* O site já está disponível e no ar para acesso livre, basta clicar neste link: [apex-legends-project.vercel.app](https://apex-legends-project.vercel.app)
 
 ### Ou atente-se ao passo a passo a seguir:
 ### 1 Passo: Clonar o repositório
