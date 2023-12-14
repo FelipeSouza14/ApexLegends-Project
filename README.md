@@ -45,7 +45,7 @@ o usuário, a partir da tela inicial, possa escolher visualizar a sua própria c
 | :---: | :---: | :---: |
 
 ## 🔖 Layout
-Você pode visualizar o layout do projeto através [DESSE LINK](https://www.figma.com/file/zxgSOzgzz2oA0yuHaxnpX1/ApexProject?type=design&node-id=0%3A1&mode=design&t=JDOc2u16ts22s1Xm-1). É necessário ter conta no [Figma](https://www.figma.com/) para acessá-lo.
+Você pode visualizar o layout do projeto através [DESSE LINK](https://www.figma.com/file/zxgSOzgzz2oA0yuHaxnpX1/ApexProject?node-id=0%3A1&mode=dev). É necessário ter conta no [Figma](https://www.figma.com/) para acessá-lo.
 
 ## 📝 Licença
 * MIT License
