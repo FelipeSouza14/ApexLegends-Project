@@ -36,13 +36,16 @@ o usuário, a partir da tela inicial, possa escolher visualizar a sua própria c
 ### 1 Passo: Clonar o repositório
 ``` git clone https://github.com/FelipeSouza14/ApexLegends-Project.git ```
 ### 2 Passo: Instalar as tecnologias necessárias
-``` npm install next ``` ``` npm install firebase ``` ``` npm install validator ```
+``` npm install ```
 ### 3 Passo: Rodar o projeto em sua máquina
 ``` npm run dev ```
 
 ## 👨‍💻 Desenvolvedores
 | [<img src="https://avatars.githubusercontent.com/u/112143084?v=4" width=155><br><sub>Felipe Souza</sub>](https://github.com/FelipeSouza14) |  [<img src="https://avatars.githubusercontent.com/u/103084622?v=4" width=155><br><sub>Isa Kaillany</sub>](https://github.com/IsaKaillany) | [<img src="https://avatars.githubusercontent.com/u/87441572?v=4" width=155><br><sub>Thamiris Borges</sub>](https://github.com/Thami03) |
 | :---: | :---: | :---: |
+
+## 🔖 Layout
+Você pode visualizar o layout do projeto através [DESSE LINK](https://www.figma.com/file/zxgSOzgzz2oA0yuHaxnpX1/ApexProject?type=design&node-id=0%3A1&mode=design&t=JDOc2u16ts22s1Xm-1). É necessário ter conta no [Figma](https://www.figma.com/) para acessá-lo.
 
 ## 📝 Licença
 * MIT License
