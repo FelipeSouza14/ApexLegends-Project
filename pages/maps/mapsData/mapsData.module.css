@@ -3,6 +3,7 @@
     height: 300px;
     border-radius: 5px;
     z-index: 1;
+    max-width: 100%;
 }
 
 .divMaps{

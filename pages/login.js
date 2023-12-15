@@ -68,7 +68,7 @@ export default function LoginPage() {
                 <form className={styles.form} onSubmit={handleSubmit}>
                     <Input
                         type="email"
-                        placeholder="E-mail"
+                        placeholder="E-MAIL"
                         value={email}
                         onChange={handleEmailChange}
                     />
