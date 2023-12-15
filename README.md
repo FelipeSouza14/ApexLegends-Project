@@ -1,7 +1,10 @@
-# ApexLegends-Project
-Projeto voltado à disciplina de Programação Web do curso de Sistemas de Informação da UFRN.
+<h1 align="center"> Apex Legends Project </h1>
 
-## Tecnologias Utilizadas 
+<p align="center">
+Projeto voltado à disciplina de Programação Web do curso de Sistemas de Informação da UFRN.
+</p>
+
+## 💻 Tecnologias Utilizadas 
 * :rocket: JavaScript
 * :fast_forward: Next.js
 * :green_circle: Node.js
@@ -11,7 +14,7 @@ Projeto voltado à disciplina de Programação Web do curso de Sistemas de Infor
 
 ## 📚 Sobre o projeto
 <div align="justify">
-O sistema web desenvolvido é baseado em um jogo de FPS (First Person Shootieg) chamado Apex Legends, disponível na EA Play. O seguinte site 
+O sistema web desenvolvido é baseado em um jogo de FPS (First Person Shooter) chamado Apex Legends, disponível na EA Play. O seguinte site 
 funciona tendo uma tela inicial, a qual possibilita ao usuário a navegação entre a tela de lendas (personagens), armas, mapas, login e minha coleção. Caso o 
 usuário já possua uma conta e esteja logado, ele poderá acessar todas as telas disponíveis, caso contrário, será redirecionado à página de login,
 para que assim, possa entrar em sua conta. Entretanto, se o usuário não for cadastrado e não possuir uma conta, será preciso que o mesmo realize 
@@ -33,11 +36,11 @@ o usuário, a partir da tela inicial, possa escolher visualizar a sua própria c
 * O site já está disponível e no ar para acesso livre, basta clicar neste link: [apex-legends-project.vercel.app](https://apex-legends-project.vercel.app)
 
 ### Ou atente-se ao passo a passo a seguir:
-### 1 Passo: Clonar o repositório
+### 1º Passo: Clonar o repositório
 ``` git clone https://github.com/FelipeSouza14/ApexLegends-Project.git ```
-### 2 Passo: Instalar as tecnologias necessárias
+### 2º Passo: Instalar as tecnologias necessárias
 ``` npm install ```
-### 3 Passo: Rodar o projeto em sua máquina
+### 3º Passo: Rodar o projeto em sua máquina
 ``` npm run dev ```
 
 ## 👨‍💻 Desenvolvedores
@@ -48,4 +51,4 @@ o usuário, a partir da tela inicial, possa escolher visualizar a sua própria c
 Você pode visualizar o layout do projeto através [DESSE LINK](https://www.figma.com/file/zxgSOzgzz2oA0yuHaxnpX1/ApexProject?node-id=0%3A1&mode=dev). É necessário ter conta no [Figma](https://www.figma.com/) para acessá-lo.
 
 ## 📝 Licença
-* MIT License
+Esse projeto está sob a licença MIT.
