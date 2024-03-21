@@ -79,10 +79,12 @@ export default function RegisterPage() {
 
     return (
         <div className={styles.background}>
-            <img
-                className={styles.logoImage}
-                src={"/assets/logos/logo-branca.png"}
-            />
+            <Link href="/">
+                <img
+                    className={styles.logoImage}
+                    src={"/assets/logos/logo-branca.png"}
+                />
+            </Link>
 
             <RegisterCard title="CRIE SUA CONTA">
                 <form className={styles.form} onSubmit={handleSubmit}>

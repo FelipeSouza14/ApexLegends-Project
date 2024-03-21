@@ -2,7 +2,7 @@
     background-color: black;
     opacity: 0.88;
     min-width: 100%;
-    min-height: 30%;
+    min-height: 70px;
     display: flex;
     justify-content: space-between;
     align-items: center;
@@ -10,7 +10,7 @@
 }
 
 .logoImagem{
-    width: 8%;
+    width: 15%;
     margin: 0.2% 2%;
 }
 
